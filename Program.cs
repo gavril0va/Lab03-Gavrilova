@@ -143,3 +143,26 @@ int number = int.Parse(Console.ReadLine());
 bool isEven = number % 2 == 0;
 
 Console.WriteLine($"Число {number} чётное: {isEven}");
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("Инкремент в выражении");
+
+// Случай 1: постфикс в отдельной строке
+int a = 5;
+int b = a++;
+// a++ сначала отдаёт старое значение в b, потом увеличивает a
+Console.WriteLine($"a = {a}, b = {b}"); // a = 6, b = 5
+
+// Случай 2: префикс в отдельной строке
+int c = 5;
+int d = ++c;
+// ++c сначала увеличивает c, потом отдаёт новое значение d
+Console.WriteLine($"c = {c}, d = {d}"); // c = 6, d = 6
+
+// Случай 3: постфикс прямо внутри вывода
+int e = 10;
+Console.WriteLine($"e++ выводит: {e++}"); 
+Console.WriteLine($"После этого e = {e}");
